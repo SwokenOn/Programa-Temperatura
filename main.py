@@ -1,6 +1,5 @@
 import customtkinter as ctk
 from datetime import date
-import tkinter as tk
 from semana import Semana
 
 def guardar_temperaturas():
