@@ -2,26 +2,33 @@ from datetime import date
 from typing import Any
 
 class Semana:
-    id = date(2023, 10, 11)
-    temperaturas = {
-        "Lunes": None,
-        "Martes": None,
-        "Miércoles": None,
-        "Jueves": None,
-        "Viernes": None,
-        "Sábado": None,
-        "Domingo": None
-    }
+    def __init__(self, id_):
+        self._id = id_
+        self._temperaturas = {
+            "Lunes": None,
+            "Martes": None,
+            "Miércoles": None,
+            "Jueves": None,
+            "Viernes": None,
+            "Sábado": None,
+            "Domingo": None
+        }
 
-    def id(self,id):
-        self.id = id
-    def id(self):
-        return self.id
-    
-    def temperaturas(self,temperaturas):
-        self.temperaturas = temperaturas
+    @property
+    def id_(self):
+        return self._id
+
+    @id_.setter
+    def id_(self, id_):
+        self._id = id_
+
+    @property
     def temperaturas(self):
-        return self.temperaturas
+        return self._temperaturas
+
+    @temperaturas.setter
+    def temperaturas(self, temperaturas):
+        self._temperaturas = temperaturas
 
     def registrar_temperatura(self, dia, temperatura):
         if dia in self.temperaturas:
