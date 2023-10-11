@@ -1,6 +1,7 @@
-import customtkinter
+import customtkinter as ctk
 from datetime import date
-import tkinter
+import tkinter as tk
+from semana import Semana
 
 def guardar_temperaturas():
     for dia, entrada in entradas.items():
@@ -10,8 +11,10 @@ def guardar_temperaturas():
         except ValueError:
             pass
 
-ventana = customtkinter.CTk()
-
+ventana = ctk.CTk()
+ventana.title("Registro de Temperaturas")
+semana = Semana(date(2023, 10, 11))
+entradas = {}
 
 
 ventana.mainloop()
