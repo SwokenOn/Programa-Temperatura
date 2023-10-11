@@ -44,7 +44,7 @@ for index, dia in enumerate(semana.temperaturas):
     entrada = ctk.CTkEntry(ventana)
     entrada.grid(row=index, column=1, padx=10, pady=5)
     entradas[dia] = entrada
-
+    
 btn_guardar = ctk.CTkButton(ventana, text="Guardar", command=guardar_temperaturas)
 btn_guardar.grid(row=len(semana.temperaturas), column=0, columnspan=2, pady=10)
 ventana.mainloop()
