@@ -14,6 +14,9 @@ class Semana:
 
     def __init__(self, id):
         self.id = id
+    
+    def __init__(self, id):
+        self.id = id
 
     def registrar_temperatura(self, dia, temperatura):
         if dia in self.temperaturas:
