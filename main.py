@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from semana import Semana
 
+def mostrar_resultados():
+    lbl_promedio.config(text=f"Promedio: {semana.calcular_promedio():.2f}°C")
+    lbl_maximo.config(text=f"Máximo: {semana.temperatura_maxima()}°C")
+    lbl_minimo.config(text=f"Mínimo: {semana.temperatura_minima()}°C")
+
 def guardar_temperaturas():
     for dia, entrada in entradas.items():
         try:
@@ -11,6 +16,7 @@ def guardar_temperaturas():
             semana.registrar_temperatura(dia, temperatura)
         except ValueError:
             pass
+    mostrar_resultados()
 
 ventana = ctk.CTk()
 ventana.title("Registro de Temperaturas")
