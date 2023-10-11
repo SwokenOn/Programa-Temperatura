@@ -5,9 +5,13 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from semana import Semana
 
 def mostrar_resultados():
-    lbl_promedio.config(text=f"Promedio: {semana.calcular_promedio():.2f}°C")
-    lbl_maximo.config(text=f"Máximo: {semana.temperatura_maxima()}°C")
-    lbl_minimo.config(text=f"Mínimo: {semana.temperatura_minima()}°C")
+    promedio = semana.calcular_promedio()
+    maximo = semana.temperatura_maxima()
+    minimo = semana.temperatura_minima()
+
+    lbl_promedio.config(text=f"Promedio: {promedio:.2f}°C")
+    lbl_maximo.config(text=f"Máximo: {maximo}°C")
+    lbl_minimo.config(text=f"Mínimo: {minimo}°C")
 
 def guardar_temperaturas():
     for dia, entrada in entradas.items():
