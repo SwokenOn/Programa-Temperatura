@@ -15,6 +15,11 @@ ventana = ctk.CTk()
 ventana.title("Registro de Temperaturas")
 semana = Semana(date(2023, 10, 11))
 entradas = {}
-
+for index, dia in enumerate(semana.temperaturas):
+    label = ctk.CTkLabel(ventana, text=dia)
+    label.grid(row=index, column=0, padx=10, pady=5)
+    entrada = ctk.CTkEntry(ventana)
+    entrada.grid(row=index, column=1, padx=10, pady=5)
+    entradas[dia] = entrada
 
 ventana.mainloop()
