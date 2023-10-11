@@ -1,5 +1,7 @@
 import customtkinter as ctk
 from datetime import date
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from semana import Semana
 
 def guardar_temperaturas():
