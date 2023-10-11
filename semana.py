@@ -1,4 +1,5 @@
 from datetime import date
+from typing import Any
 
 class Semana:
     id = date(2023, 10, 11)
@@ -12,13 +13,15 @@ class Semana:
         "Domingo": None
     }
 
-    def __init__(self, id):
+    def id(self,id):
         self.id = id
+    def id(self):
+        return self.id
     
-    def __init__(self, temperaturas):
+    def temperaturas(self,temperaturas):
         self.temperaturas = temperaturas
-
-    
+    def temperaturas(self):
+        return self.temperaturas
 
     def registrar_temperatura(self, dia, temperatura):
         if dia in self.temperaturas:
@@ -34,3 +37,9 @@ class Semana:
                 total += temp
                 dias_contados += 1
         return total / dias_contados if dias_contados > 0 else 0
+
+    def temperatura_maxima(self):
+        return max(filter(None, self.temperaturas.values()))
+
+    def temperatura_minima(self):
+        return min(filter(None, self.temperaturas.values()))
