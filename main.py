@@ -18,6 +18,22 @@ def guardar_temperaturas():
             pass
     mostrar_resultados()
 
+def mostrar_grafico():
+    dias = list(semana.temperaturas.keys())
+    temps = [semana.temperaturas[dia] for dia in dias]
+    
+    fig, ax = plt.subplots()
+    ax.plot(dias, temps, marker='o')
+    ax.set_title('Temperaturas de la Semana')
+    ax.set_xlabel('Día')
+    ax.set_ylabel('Temperatura (°C)')
+    
+    canvas = FigureCanvasTkAgg(fig, master=ventana)
+    canvas_widget = canvas.get_tk_widget()
+    canvas_widget.grid(row=8, column=0, columnspan=2, padx=10, pady=10)
+    canvas.draw()
+
+
 ventana = ctk.CTk()
 ventana.title("Registro de Temperaturas")
 semana = Semana(date(2023, 10, 11))
