@@ -51,5 +51,13 @@ btn_guardar.grid(row=0, column=2, pady=10)
 btn_grafico = ctk.CTkButton(ventana, text="Mostrar Gráfico", command=mostrar_grafico)
 btn_grafico.grid(row=1, column=2, pady=10)
 
+lbl_promedio = ctk.CTkLabel(ventana, text="Promedio: --°C")
+lbl_promedio.grid(row=2, column=2)
+
+lbl_maximo = ctk.CTkLabel(ventana, text="Máximo: --°C")
+lbl_maximo.grid(row=3, column=2)
+
+lbl_minimo = ctk.CTkLabel(ventana, text="Mínimo: --°C")
+lbl_minimo.grid(row=4, column=2)
 
 ventana.mainloop()
