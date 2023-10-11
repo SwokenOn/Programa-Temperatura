@@ -1,4 +1,7 @@
-from customtkinter import CTk
-from tkinter import Tk
+import customtkinter
+import tkinter
 
-ventana = CTk
+ventana = customtkinter.CTk()
+
+
+ventana.mainloop()
