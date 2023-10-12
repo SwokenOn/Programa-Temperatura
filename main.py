@@ -9,9 +9,9 @@ def mostrar_resultados():
     maximo = semana.temperatura_maxima()
     minimo = semana.temperatura_minima()
 
-    lbl_promedio.config(text=f"Promedio: {promedio:.2f}°C")
-    lbl_maximo.config(text=f"Máximo: {maximo}°C")
-    lbl_minimo.config(text=f"Mínimo: {minimo}°C")
+    lbl_promedio.configure(text=f"Promedio: {promedio:.2f}°C")
+    lbl_maximo.configure(text=f"Máximo: {maximo}°C")
+    lbl_minimo.configure(text=f"Mínimo: {minimo}°C")
 
 def guardar_temperaturas():
     for dia, entrada in entradas.items():
