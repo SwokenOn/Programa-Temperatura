@@ -40,6 +40,7 @@ def mostrar_grafico():
 
 ventana = ctk.CTk()
 ventana.title("Registro de Temperaturas")
+ventana.geometry("800x600")
 semana = Semana(date(2023, 10, 11))
 entradas = {}
 for index, dia in enumerate(semana.temperaturas):
